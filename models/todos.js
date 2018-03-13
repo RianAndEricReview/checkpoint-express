@@ -17,13 +17,14 @@ module.exports = {
     taskToAdd.complete = (taskToAdd.complete) ? taskToAdd.complete : false
     if (tasks[name]) {
       tasks[name].push(taskToAdd)
-      // tasks[name][tasks[name].length - 1].complete = false
     } else {
       tasks[name] = [taskToAdd]
-      // tasks[name][tasks[name].length - 1].complete = false
     }
   },
   list: function(name) {
     return tasks[name]
+  },
+  complete: function(name, taskIndex) {
+    tasks[name][taskIndex].complete = true
   }
 };

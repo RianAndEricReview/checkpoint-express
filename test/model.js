@@ -53,7 +53,7 @@ describe('Todo model', function() {
       expect(Todos.list('zeke')[1].complete).to.be.false;
     });
 
-    xit("is a method that sets a specified task's `complete` property to true", function() {
+    it("is a method that sets a specified task's `complete` property to true", function() {
       Todos.add('zeke', { content: 'go to store' });
       Todos.add('zeke', { content: 'go to library' });
       Todos.add('zeke', { content: 'go to park' });
