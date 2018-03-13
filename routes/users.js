@@ -25,7 +25,15 @@ router.post('/:name/tasks', (req, res, next) => {
   res.status(201).json(addedTask)
 })
 
+router.put('/:name/tasks/:index', (req, res, next) => {
+  db.complete(req.params.name, req.params.index)
+  res.send(res.status)
+})
 
+router.delete('/:name/tasks/:index', (req, res, next) => {
+  db.remove(req.params.name, req.params.index)
+  res.status(204).send(res.status)
+})
 
 
 module.exports = router
