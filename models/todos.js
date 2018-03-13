@@ -20,6 +20,7 @@ module.exports = {
     } else {
       tasks[name] = [taskToAdd]
     }
+    return taskToAdd
   },
   list: function(name) {
     return tasks[name]

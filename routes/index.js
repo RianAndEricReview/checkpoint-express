@@ -2,6 +2,10 @@
 
 var express = require('express');
 var router = express.Router();
-module.exports = router;
+const userRoutes = require('./users')
+const taskRoutes = require('./tasks')
 
-// write your routes here. Feel free to split into multiple files if you like.
+router.use('/users', userRoutes)
+router.use('/tasks', taskRoutes)
+
+module.exports = router;
