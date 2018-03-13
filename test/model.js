@@ -46,7 +46,7 @@ describe('Todo model', function() {
       expect(Todos.list('zeke')[0].complete).to.be.false;
     });
 
-    xit('respects a pre-existing completion status', function() {
+    it('respects a pre-existing completion status', function() {
       Todos.add('zeke', { content: 'clean self', complete: true });
       Todos.add('zeke', { content: 'clean the world', complete: false });
       expect(Todos.list('zeke')[0].complete).to.be.true;

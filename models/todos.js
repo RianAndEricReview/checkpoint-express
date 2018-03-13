@@ -13,8 +13,8 @@ module.exports = {
   },
   add: function (name, task) {
     // saves a task for a given person
-    let taskToAdd = task.complete ? task : task.complete = false
-    console.log(taskToAdd)
+    let taskToAdd = task
+    taskToAdd.complete = (taskToAdd.complete) ? taskToAdd.complete : false
     if (tasks[name]) {
       tasks[name].push(taskToAdd)
       // tasks[name][tasks[name].length - 1].complete = false
