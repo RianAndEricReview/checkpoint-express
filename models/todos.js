@@ -26,5 +26,8 @@ module.exports = {
   },
   complete: function(name, taskIndex) {
     tasks[name][taskIndex].complete = true
+  },
+  remove: function(name, taskIndex) {
+    tasks[name].splice(taskIndex, 1)
   }
 };
